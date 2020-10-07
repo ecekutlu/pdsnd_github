@@ -23,7 +23,7 @@ def get_city():
         elif city.lower() == 'washington':
             return 'washington.csv'
         else:
-            print('Oops! That was not quite right, go again!')
+            print('Oops! Something went wrong, go again!')
 
 def get_time_period():
     """Asks the user for a time period and returns the specified filter"""
