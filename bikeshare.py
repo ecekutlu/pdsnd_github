@@ -14,7 +14,7 @@ def get_city():
     city = ''
     while city.lower() not in ['chicago', 'new york', 'washington']:
         city = input('\nHello! Let\'s explore some US bikeshare data!\n'
-                     'Would you like to see data for Chicago, New York, or'
+                     'Which city would you like to see data for Chicago, New York, or'
                      ' Washington?\n')
         if city.lower() == 'chicago':
             return 'chicago.csv'
@@ -299,4 +299,4 @@ def statistics():
 
 
 if __name__ == "__main__":
-	statistics() 
+	statistics()
