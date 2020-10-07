@@ -152,7 +152,9 @@ def birth_years(df):
           '\nThe most commmon birth year for bikers are {}.'.format(earliest, latest, mode))
 
 def display_data(df):
-    """Displays more data if the user wants to observe."""
+    """Displays more data if the user wants to observe.
+    INPUT:
+    OUTPUT:"""
 
     def is_valid(display):
         if display.lower() in ['yes', 'no']:
