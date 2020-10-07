@@ -198,6 +198,7 @@ def statistics():
     """Prints raw data and statistics of the city"""
     # Filter by city (Chicago, New York, Washington)
     city = get_city()
+    incal = 'Calculating your statistics...'
     print('Just a sec...')
     df = pd.read_csv(city, parse_dates = ['Start Time', 'End Time'])
 
@@ -224,7 +225,7 @@ def statistics():
             filter_lower, filter_upper = get_month()
         elif time_period == 'day':
             filter_lower, filter_upper = get_day()
-        print('Cleaning it a bit...')
+        print(incal)
         df_filtered = df[(df['start_time'] >= filter_lower) & (df['start_time'] < filter_upper)]
     print('\nCalculating the first statistic...')
 
@@ -234,7 +235,7 @@ def statistics():
         # What is the most popular month for start time?
         popular_month(df_filtered)
         print("Phew that took about %s seconds." % (time.time() - start_time))
-        print("\nCalculating...")
+        print(incal)
 
     if time_period == 'none' or time_period == 'month':
         start_time = time.time()
@@ -242,31 +243,31 @@ def statistics():
         # What is the most popular day of week (Monday, Tuesday, etc.) for start time?
         popular_day(df_filtered)
         print("That took %s seconds." % (time.time() - start_time))
-        print("\nCalculating...")
+        print(incal)
         start_time = time.time()
 
     # What is the most popular hour of day for start time?
     popular_hour(df_filtered)
     print("That took %s seconds." % (time.time() - start_time))
-    print("\nCalculating...")
+    print(incal)
     start_time = time.time()
 
     # What is the total trip duration and average trip duration?
     trip_duration(df_filtered)
     print("That took %s seconds." % (time.time() - start_time))
-    print("\nCalculating...")
+    print(incal)
     start_time = time.time()
 
     # What is the most popular start station and most popular end station?
     popular_stations(df_filtered)
     print("That took %s seconds." % (time.time() - start_time))
-    print("\nCalculating...")
+    print(incal)
     start_time = time.time()
 
     # What is the most popular trip?
     popular_trip(df_filtered)
     print("That took %s seconds." % (time.time() - start_time))
-    print("\nCalculating...")
+    print(incal)
     start_time = time.time()
 
     # What are the counts of each user type?
@@ -274,13 +275,13 @@ def statistics():
     print("That took %s seconds." % (time.time() - start_time))
 
     if city == 'chicago.csv' or city == 'new_york_city.csv':
-        print("\nCalculating...")
+        print(incal)
         start_time = time.time()
 
         # What are the counts of gender?
         gender(df_filtered)
         print("That took %s seconds." % (time.time() - start_time))
-        print("\nCalculating...")
+        print(incal)
         start_time = time.time()
 
         # What are the earliest (i.e. oldest user), most recent (i.e. youngest
