@@ -1,15 +1,12 @@
 ### Date created
-Include the date you created this project and README file.
-
+07.10.20
 ### Project Title
-Replace the Project Title
+Ece's Project
 
 ### Description
-Describe what your project is about and what it does
+My project is about managing my files with git commands on my local repository and also uploading them onto git hub.
 
 ### Files used
-Include the files used
-
+I used files bikeshare.py .gitignore and this readme file
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Thanks Udacity!
